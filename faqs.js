@@ -5,7 +5,7 @@ let questions = [
             'tag js',
             'tag script',
             'tag scripting',
-            // 'tag javascript'
+            'tag javascript'
         ],
         answer: 1
     },

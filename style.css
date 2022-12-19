@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.model{
+    display: none;
+}
 header{
     width: 100%;
     height: 10px;
@@ -16,30 +19,31 @@ header .bar{
 }
 .prog-bar{
     background-color: #00A884;
-    width: 200px;
+    width: 0;
     height: 100%;
     z-index: 9999;
+    transition: 2s;
 }
 
 main{
     height: calc(100vh - 10px);
     width: 100vw;
     margin-top: 10px;
-    background-color: #111B21;
+    background-color: #37393E;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .faq{
-    background-color: #293238;
+    background-color: #111B21;
     width: 800px;
-    height: 500px;
+    /* height: 500px; */
     border-radius: 10px;
     border:1px solid #fff;
     -webkit-box-shadow: 0px 4px 14px 7px #000000; 
     box-shadow: 0px 4px 14px 7px #000000;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -47,7 +51,6 @@ main{
 .faq-question{
     width: 100%;
     height: 100px;
-    background-color: #111B21;
     color:#fff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -55,7 +58,6 @@ main{
     font-size: 26px;
     display: flex;
     align-items: center;
-    text-align: center;
     padding: 20px;
 }
 .faq-answers{
@@ -68,16 +70,18 @@ main{
     align-items: center;
     justify-content: center;
 }
-.faq-answers .answ{
+.answ{
     width: calc(100% - 20px);
-    height: 80px;
-    background-color: #111B21;
-    margin: 20px 0;
+    height: 50px;
+    background-color: #37393E;
+    /* background-color: #111B21; */
+    margin: 10px 0;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
     border: 1px solid #FFF;
     align-items: center;
+    transition: 1s;
 }
 .answ .check{
     flex: 1;
@@ -92,4 +96,7 @@ main{
     padding-right: 20px;
     color: #fff;
     font-size: 18px;
+}
+button{
+    display: none;
 }
