@@ -37,12 +37,16 @@ function validateAnswer() {
             } else {
                 correctAnswers[i+1].style.backgroundColor = 'red';
             }
-        } 
+            currentQuestion++;
+            setTimeout(cleanAll, 1500)
+            setTimeout(showQuestion, 1502)
+        } else{
+            alert('bla')
+
+        }
         
-    }
-    currentQuestion++;
-    setTimeout(cleanAll, 1500)
-    setTimeout(showQuestion, 1502)
+    } 
+
 }
 
 const cleanAll = () => document.querySelector('.faq-answers').innerHTML = '';
