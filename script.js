@@ -1,8 +1,7 @@
-let progress = document.querySelector('.prog-bar');
+let progress = document.querySelectorAll('.prog-bar');
 let pts = 0;
 let divisor = questions.length;
 let currentQuestion = 0;
-let resultado = (pts/11)*100;
 
 function showQuestion() {
 
@@ -33,29 +32,38 @@ function validateAnswer() {
             if( i == questions[currentQuestion].answer) {
                 correctAnswers[i+1].style.backgroundColor = 'green';
                 pts++;
-                progress.style.width = `${(pts/divisor)*100}%`
+                progress[0].style.width = `${(pts/divisor)*100}%`
             } else {
                 correctAnswers[i+1].style.backgroundColor = 'red';
             }
             currentQuestion++;
-            setTimeout(cleanAll, 1500)
-            setTimeout(showQuestion, 1502)
-        } else{
-            alert('bla')
 
-        }
-        
+            setTimeout(()=>{
+                cleanAll();
+            }, 1500)
+
+            setTimeout(() => {
+                showQuestion();
+            }, 1502)
+        } 
     } 
-
 }
 
 const cleanAll = () => document.querySelector('.faq-answers').innerHTML = '';
 document.querySelector('button').addEventListener('click', validateAnswer);
 
+
 function showProgress(){
-    document.querySelector('.faq').style.display = 'none';
+
+    document.querySelector('.faq-question').style.display = 'none';
     document.querySelector('button').style.display = 'none';
-    // document.querySelector('.finalMsg').style.display = 'flex';
+    document.querySelector('.result').style.display = 'block';
+    progress[1].style.width = `${(pts/divisor)*100}%`
+    document.querySelector('.msg').innerHTML = `Você acertou ${(pts/divisor)*100}%`
+
+    setTimeout(() => {
+        setTimeout(location.reload())
+    }, 5000)
 }
 
 showQuestion();

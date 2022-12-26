@@ -46,6 +46,8 @@ main{
     padding: 20px;    
     -webkit-box-shadow: 0px 3px 7px 0px #000000; 
     box-shadow: 0px 3px 7px 0px #000000;
+
+
 }
 
 .faq-answers{
@@ -55,6 +57,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+
 }
 .answ{
     width: 200px;
@@ -101,6 +105,8 @@ button{
     cursor: pointer;
     -webkit-box-shadow: 0px 3px 7px 0px #000000; 
     box-shadow: 0px 3px 7px 0px #000000;
+
+
 }
 button:hover{
     background-color: #4B0082;
@@ -108,4 +114,27 @@ button:hover{
 button:active{
     background-color: #7B68EE;
 
+}
+
+.result{
+    width: 450px;
+    display: none;
+}
+.msg{
+    width: 100%;
+    height: 75px;
+    background-color: #4B0082;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 20px;
+}
+.result .bar{
+    width: calc(100% - 50px);
+    height: 20px;
+    border-radius: 20px;
+    margin: 50px auto;
+    background-color: red;
 }
