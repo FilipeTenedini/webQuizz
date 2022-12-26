@@ -58,6 +58,7 @@ function showProgress(){
     document.querySelector('.faq-question').style.display = 'none';
     document.querySelector('button').style.display = 'none';
     document.querySelector('.result').style.display = 'block';
+    
     progress[1].style.width = `${(pts/divisor)*100}%`
     document.querySelector('.msg').innerHTML = `Você acertou ${(pts/divisor)*100}%`
 
