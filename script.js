@@ -65,5 +65,5 @@ function showProgress(){
     setTimeout(() => {
         location.reload();
     }, 5000)
-
+}
 showQuestion();
