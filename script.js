@@ -63,8 +63,7 @@ function showProgress(){
     document.querySelector('.msg').innerHTML = `Você acertou ${(pts/divisor)*100}%`
 
     setTimeout(() => {
-        setTimeout(location.reload())
+        location.reload();
     }, 5000)
-}
 
 showQuestion();
